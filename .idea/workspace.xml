@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbca24f8-5a05-4b37-b7e5-6f60387a0c60" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="ProjectId" id="1YXGGIX1aRL6BbvaO4CqlKSxQTC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build " type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="tokenProject" />
+      <working_directory value="$PROJECT_DIR$/main" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="167" key="#GOPATH" timestamp="1583081473242">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="440" y="167" key="#GOPATH/0.23.1680.955@0.23.1680.955" timestamp="1583081473242" />
+    <state x="440" y="167" key="#SQL_Dialects" timestamp="1583081665374">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="440" y="167" key="#SQL_Dialects/0.23.1680.955@0.23.1680.955" timestamp="1583081665374" />
+    <state x="440" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583084917992">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="440" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.955@0.23.1680.955" timestamp="1583084917992" />
+    <state x="533" y="150" key="#go_build_" timestamp="1583084899389">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="533" y="150" key="#go_build_/0.23.1680.955@0.23.1680.955" timestamp="1583084899389" />
+    <state width="1358" height="300" key="GridCell.Tab.0.bottom" timestamp="1583085393413">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.0.bottom/0.23.1680.955@0.23.1680.955" timestamp="1583085036593" />
+    <state width="1358" height="300" key="GridCell.Tab.0.bottom/0.23.1680.957@0.23.1680.957" timestamp="1583085393413" />
+    <state width="1358" height="300" key="GridCell.Tab.0.center" timestamp="1583085393413">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.0.center/0.23.1680.955@0.23.1680.955" timestamp="1583085036592" />
+    <state width="1358" height="300" key="GridCell.Tab.0.center/0.23.1680.957@0.23.1680.957" timestamp="1583085393413" />
+    <state width="1358" height="300" key="GridCell.Tab.0.left" timestamp="1583085393412">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.0.left/0.23.1680.955@0.23.1680.955" timestamp="1583085036591" />
+    <state width="1358" height="300" key="GridCell.Tab.0.left/0.23.1680.957@0.23.1680.957" timestamp="1583085393412" />
+    <state width="1358" height="300" key="GridCell.Tab.0.right" timestamp="1583085393413">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.0.right/0.23.1680.955@0.23.1680.955" timestamp="1583085036592" />
+    <state width="1358" height="300" key="GridCell.Tab.0.right/0.23.1680.957@0.23.1680.957" timestamp="1583085393413" />
+    <state width="1358" height="300" key="GridCell.Tab.1.bottom" timestamp="1583085393415">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.1.bottom/0.23.1680.955@0.23.1680.955" timestamp="1583085036510" />
+    <state width="1358" height="300" key="GridCell.Tab.1.bottom/0.23.1680.957@0.23.1680.957" timestamp="1583085393415" />
+    <state width="1358" height="300" key="GridCell.Tab.1.center" timestamp="1583085393414">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.1.center/0.23.1680.955@0.23.1680.955" timestamp="1583085036509" />
+    <state width="1358" height="300" key="GridCell.Tab.1.center/0.23.1680.957@0.23.1680.957" timestamp="1583085393414" />
+    <state width="1358" height="300" key="GridCell.Tab.1.left" timestamp="1583085393414">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.1.left/0.23.1680.955@0.23.1680.955" timestamp="1583085036509" />
+    <state width="1358" height="300" key="GridCell.Tab.1.left/0.23.1680.957@0.23.1680.957" timestamp="1583085393414" />
+    <state width="1358" height="300" key="GridCell.Tab.1.right" timestamp="1583085393414">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state width="1358" height="300" key="GridCell.Tab.1.right/0.23.1680.955@0.23.1680.955" timestamp="1583085036510" />
+    <state width="1358" height="300" key="GridCell.Tab.1.right/0.23.1680.957@0.23.1680.957" timestamp="1583085393414" />
+  </component>
+</project>
