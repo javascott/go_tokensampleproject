@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package token;
+
+service AuthService {
+  // Gets A token
+  rpc Auth(TokenRequest) returns(TokenReply) {}
+}
+
+// The response Token
+message TokenRequest {
+}
+
+// The response Token
+message TokenReply {
+  string token = 1;
+}
+
+
+//service PathService {
+  // Checks Path count including this request
+  //rpc CheckPath (RequestPath) returns (CountReply) {}
+//}
+
+// The request with the path
+//message RequestPath {
+//  string path = 1;
+//}
+
+// The response Count
+//message CountReply {
+//  string count = 1;
+//}
