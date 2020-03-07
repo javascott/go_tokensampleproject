@@ -3,6 +3,8 @@ package lib
 import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
+	uuid "github.com/google/uuid"
+	"strings"
 )
 
 func DbConn() (db *sql.DB) {
@@ -23,7 +25,7 @@ type Token struct {
 }
 
 func generateString() string {
-	return "1234567"
+	return strings.Replace(uuid.New().String(), "-", "", -1)
 }
 
 //create new token and save to DB
