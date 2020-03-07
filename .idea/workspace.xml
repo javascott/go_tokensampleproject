@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbca24f8-5a05-4b37-b7e5-6f60387a0c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/token/token.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/token/token.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/token_client/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tokenProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tokenProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/lib/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_server/lib/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/restlistener.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token/token.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/token/token.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token/token.proto" beforeDir="false" afterPath="$PROJECT_DIR$/token/token.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token_client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_client/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token_server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_server/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

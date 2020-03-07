@@ -96,9 +96,99 @@ func (m *TokenReply) GetToken() string {
 	return ""
 }
 
+// The request with the path
+type RequestPath struct {
+	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Path                 string   `protobuf:"bytes,2,opt,name=path,proto3" json:"path,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *RequestPath) Reset()         { *m = RequestPath{} }
+func (m *RequestPath) String() string { return proto.CompactTextString(m) }
+func (*RequestPath) ProtoMessage()    {}
+func (*RequestPath) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3aff0bcd502840ab, []int{2}
+}
+
+func (m *RequestPath) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RequestPath.Unmarshal(m, b)
+}
+func (m *RequestPath) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RequestPath.Marshal(b, m, deterministic)
+}
+func (m *RequestPath) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RequestPath.Merge(m, src)
+}
+func (m *RequestPath) XXX_Size() int {
+	return xxx_messageInfo_RequestPath.Size(m)
+}
+func (m *RequestPath) XXX_DiscardUnknown() {
+	xxx_messageInfo_RequestPath.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RequestPath proto.InternalMessageInfo
+
+func (m *RequestPath) GetToken() string {
+	if m != nil {
+		return m.Token
+	}
+	return ""
+}
+
+func (m *RequestPath) GetPath() string {
+	if m != nil {
+		return m.Path
+	}
+	return ""
+}
+
+// The response Count
+type CountReply struct {
+	Count                string   `protobuf:"bytes,1,opt,name=count,proto3" json:"count,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *CountReply) Reset()         { *m = CountReply{} }
+func (m *CountReply) String() string { return proto.CompactTextString(m) }
+func (*CountReply) ProtoMessage()    {}
+func (*CountReply) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3aff0bcd502840ab, []int{3}
+}
+
+func (m *CountReply) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CountReply.Unmarshal(m, b)
+}
+func (m *CountReply) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CountReply.Marshal(b, m, deterministic)
+}
+func (m *CountReply) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CountReply.Merge(m, src)
+}
+func (m *CountReply) XXX_Size() int {
+	return xxx_messageInfo_CountReply.Size(m)
+}
+func (m *CountReply) XXX_DiscardUnknown() {
+	xxx_messageInfo_CountReply.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_CountReply proto.InternalMessageInfo
+
+func (m *CountReply) GetCount() string {
+	if m != nil {
+		return m.Count
+	}
+	return ""
+}
+
 func init() {
 	proto.RegisterType((*TokenRequest)(nil), "token.TokenRequest")
 	proto.RegisterType((*TokenReply)(nil), "token.TokenReply")
+	proto.RegisterType((*RequestPath)(nil), "token.RequestPath")
+	proto.RegisterType((*CountReply)(nil), "token.CountReply")
 }
 
 func init() {
@@ -106,15 +196,19 @@ func init() {
 }
 
 var fileDescriptor_3aff0bcd502840ab = []byte{
-	// 119 bytes of a gzipped FileDescriptorProto
+	// 182 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x2e, 0xc9, 0xcf, 0x4e,
 	0xcd, 0xd3, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x05, 0x73, 0x94, 0xf8, 0xb8, 0x78, 0x42,
 	0x40, 0x8c, 0xa0, 0xd4, 0xc2, 0xd2, 0xd4, 0xe2, 0x12, 0x25, 0x25, 0x2e, 0x2e, 0x28, 0xbf, 0x20,
-	0xa7, 0x52, 0x48, 0x84, 0x0b, 0xa2, 0x4c, 0x82, 0x51, 0x81, 0x51, 0x83, 0x33, 0x08, 0xc2, 0x31,
-	0xb2, 0xe7, 0xe2, 0x76, 0x2c, 0x2d, 0xc9, 0x08, 0x4e, 0x2d, 0x2a, 0xcb, 0x4c, 0x4e, 0x15, 0x32,
-	0xe0, 0x62, 0x01, 0x71, 0x85, 0x84, 0xf5, 0x20, 0xe6, 0x23, 0x9b, 0x27, 0x25, 0x88, 0x2a, 0x58,
-	0x90, 0x53, 0xa9, 0xc4, 0x90, 0xc4, 0x06, 0x76, 0x82, 0x31, 0x20, 0x00, 0x00, 0xff, 0xff, 0x28,
-	0x15, 0x5f, 0x12, 0x91, 0x00, 0x00, 0x00,
+	0xa7, 0x52, 0x48, 0x84, 0x0b, 0xa2, 0x4c, 0x82, 0x51, 0x81, 0x51, 0x83, 0x33, 0x08, 0xaa, 0xc7,
+	0x9c, 0x8b, 0x1b, 0xaa, 0x3c, 0x20, 0xb1, 0x24, 0x03, 0xbb, 0x22, 0x21, 0x21, 0x2e, 0x96, 0x82,
+	0xc4, 0x92, 0x0c, 0x09, 0x26, 0xb0, 0x20, 0x98, 0x0d, 0x32, 0xdc, 0x39, 0xbf, 0x34, 0xaf, 0x04,
+	0x6e, 0x78, 0x32, 0x88, 0x07, 0xd3, 0x07, 0xe6, 0x18, 0x95, 0x41, 0x1d, 0x14, 0x9c, 0x5a, 0x54,
+	0x96, 0x99, 0x9c, 0x2a, 0x64, 0xc0, 0xc5, 0xe2, 0x58, 0x5a, 0x92, 0x21, 0x24, 0xac, 0x07, 0x71,
+	0x3d, 0xb2, 0x6b, 0xa5, 0x04, 0x51, 0x05, 0x0b, 0x72, 0x2a, 0x95, 0x18, 0x84, 0x4c, 0xb8, 0x38,
+	0x9d, 0x33, 0x52, 0x93, 0xb3, 0xc1, 0x8e, 0x13, 0x82, 0xaa, 0x40, 0x72, 0x30, 0x5c, 0x17, 0xc2,
+	0x2d, 0x4a, 0x0c, 0x49, 0x6c, 0xe0, 0x60, 0x31, 0x06, 0x04, 0x00, 0x00, 0xff, 0xff, 0xd6, 0x9c,
+	0x44, 0x7f, 0x25, 0x01, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -125,74 +219,110 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// AuthServiceClient is the client API for AuthService service.
+// TokenServiceClient is the client API for TokenService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type AuthServiceClient interface {
+type TokenServiceClient interface {
 	// Gets A token
 	Auth(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*TokenReply, error)
+	CheckPath(ctx context.Context, in *RequestPath, opts ...grpc.CallOption) (*CountReply, error)
 }
 
-type authServiceClient struct {
+type tokenServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAuthServiceClient(cc grpc.ClientConnInterface) AuthServiceClient {
-	return &authServiceClient{cc}
+func NewTokenServiceClient(cc grpc.ClientConnInterface) TokenServiceClient {
+	return &tokenServiceClient{cc}
 }
 
-func (c *authServiceClient) Auth(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*TokenReply, error) {
+func (c *tokenServiceClient) Auth(ctx context.Context, in *TokenRequest, opts ...grpc.CallOption) (*TokenReply, error) {
 	out := new(TokenReply)
-	err := c.cc.Invoke(ctx, "/token.AuthService/Auth", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/token.TokenService/Auth", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AuthServiceServer is the server API for AuthService service.
-type AuthServiceServer interface {
+func (c *tokenServiceClient) CheckPath(ctx context.Context, in *RequestPath, opts ...grpc.CallOption) (*CountReply, error) {
+	out := new(CountReply)
+	err := c.cc.Invoke(ctx, "/token.TokenService/CheckPath", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// TokenServiceServer is the server API for TokenService service.
+type TokenServiceServer interface {
 	// Gets A token
 	Auth(context.Context, *TokenRequest) (*TokenReply, error)
+	CheckPath(context.Context, *RequestPath) (*CountReply, error)
 }
 
-// UnimplementedAuthServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedAuthServiceServer struct {
+// UnimplementedTokenServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedTokenServiceServer struct {
 }
 
-func (*UnimplementedAuthServiceServer) Auth(ctx context.Context, req *TokenRequest) (*TokenReply, error) {
+func (*UnimplementedTokenServiceServer) Auth(ctx context.Context, req *TokenRequest) (*TokenReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Auth not implemented")
 }
-
-func RegisterAuthServiceServer(s *grpc.Server, srv AuthServiceServer) {
-	s.RegisterService(&_AuthService_serviceDesc, srv)
+func (*UnimplementedTokenServiceServer) CheckPath(ctx context.Context, req *RequestPath) (*CountReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckPath not implemented")
 }
 
-func _AuthService_Auth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func RegisterTokenServiceServer(s *grpc.Server, srv TokenServiceServer) {
+	s.RegisterService(&_TokenService_serviceDesc, srv)
+}
+
+func _TokenService_Auth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(TokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).Auth(ctx, in)
+		return srv.(TokenServiceServer).Auth(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/token.AuthService/Auth",
+		FullMethod: "/token.TokenService/Auth",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).Auth(ctx, req.(*TokenRequest))
+		return srv.(TokenServiceServer).Auth(ctx, req.(*TokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _AuthService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "token.AuthService",
-	HandlerType: (*AuthServiceServer)(nil),
+func _TokenService_CheckPath_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RequestPath)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TokenServiceServer).CheckPath(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/token.TokenService/CheckPath",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TokenServiceServer).CheckPath(ctx, req.(*RequestPath))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _TokenService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "token.TokenService",
+	HandlerType: (*TokenServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Auth",
-			Handler:    _AuthService_Auth_Handler,
+			Handler:    _TokenService_Auth_Handler,
+		},
+		{
+			MethodName: "CheckPath",
+			Handler:    _TokenService_CheckPath_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

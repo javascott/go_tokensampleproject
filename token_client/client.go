@@ -23,24 +23,31 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := proto.NewAuthServiceClient(conn)
+	c := proto.NewTokenServiceClient(conn)
 
 	// Contact the server and print out its response.
-	name := "Auth"
+	path := "Auth"
 	if len(os.Args) > 1 {
-		name = os.Args[1]
+		path = os.Args[1]
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	if name == "Auth" {
-		fmt.Println("Client calling Auth")
-		r, err := c.Auth(ctx, &proto.TokenRequest{})
-		if err != nil {
-			log.Fatalf("could not find server: %v", err)
-		}
-		fmt.Println("Token is: %s", r.Token)
-	} else {
-		fmt.Println("no match")
+	fmt.Println("Client calling Auth")
+	r, err := c.Auth(ctx, &proto.TokenRequest{})
+	if err != nil {
+		log.Fatalf("could not find server: %v", err)
 	}
+	newToken := r.Token
+	fmt.Println("Token is: %s", newToken)
+
+	fmt.Println("Client calling Path")
+	newPath := &proto.RequestPath{}
+	newPath.Token = newToken
+	newPath.Path = path
+	r2, err2 := c.CheckPath(ctx, newPath)
+	if err2 != nil {
+		log.Fatalf("could not find server: %v", err2)
+	}
+	fmt.Println(r2.Count)
 }
 
