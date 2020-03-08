@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbca24f8-5a05-4b37-b7e5-6f60387a0c60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest_server/rest.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token_client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_client/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token_server/lib/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_server/lib/dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token_server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest_server/rest.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest_server/rest.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

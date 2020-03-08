@@ -21,7 +21,6 @@ type ReturnCount struct {
 }
 
 func checkPath(w http.ResponseWriter, r *http.Request) {
-
 	if checkTokenExists(r.Header.Get("Authorization")) {
 		path := strings.Replace(r.URL.String(), "/", "", -1)
 		returnCount := ReturnCount{checkPathCount(path)}
@@ -29,7 +28,8 @@ func checkPath(w http.ResponseWriter, r *http.Request) {
 		returnJSON := "{count: " + strconv.FormatInt(int64(returnCount.count), 10) + "}"
 		fmt.Fprintf(w, returnJSON)
 	} else {
-		fmt.Fprintf(w, "Unathorized")
+		w.WriteHeader(401)
+		fmt.Fprintf(w, "Unauthorized")
 	}
 }
 
@@ -41,6 +41,7 @@ func insertNewToken(w http.ResponseWriter, r *http.Request) {
 	returnToken := ReturnToken{TokenDaos.CreateToken()}
 	//converting this to look like a JSON object
 	returnJSON := "{token: " + returnToken.token + "}"
+	w.WriteHeader(201)
 	fmt.Fprintf(w, returnJSON)
 }
 

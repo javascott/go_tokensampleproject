@@ -11,14 +11,23 @@ Setup:
     2) go get google.golang.org/grpc
     3) go get github.com/google/uuid
     
-4) To Run the RPC tests
+4) To Run the RPC system
     1) Start Server
         1) navigate a terminal to {project directory}
         2) go run token_server/server.go
-    1) Start Server
+    2) Start Client
         1) navigate a terminal to {project directory}
         2) go run token_client/client.go {path_to_test}
         
-        
+5) To Run the REST system
+    1) Start Server
+        1) navigate a terminal to {project directory}
+        2) go run rest_server/rest.go 
+    2) Use Postman or similar client
+        1) GET localhost:8080/auth 
+            1) it will return you a token
+        2) GET localhost:8080/{path_to_test}
+            1) you will need to set the Header parameter of Authorization: {token from step 1}
+            2) it will return you a count for how many times that path was used
                 
 
