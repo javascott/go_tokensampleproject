@@ -9,9 +9,10 @@ import (
 
 func DbConn() (db *sql.DB) {
 	dbDriver := "mysql"
-	dbUsername := "root"
+	dbUsername := "golanguser"
+	dbPassword := "golangpassword"
 	dbName := "tokens"
-	db, err := sql.Open(dbDriver, dbUsername+"@/"+dbName)
+	db, err := sql.Open(dbDriver, dbUsername+":"+dbPassword+"@/"+dbName)
 	if err != nil {
 		panic(err.Error())
 	}

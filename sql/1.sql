@@ -15,6 +15,9 @@ create table token (
     unique key (token)
 );
 
+-- for unit tests
+insert into token (token, createdDate) values ("1234567", NOW());
+
 drop table if exists used;
 
 create table used (
@@ -23,3 +26,7 @@ create table used (
     usedDate datetime,
     PRIMARY KEY (usedId)
 );
+
+CREATE USER 'golanguser'@'localhost' IDENTIFIED BY 'golangpassword';
+
+grant ALL on tokens.* to 'golanguser'@'localhost' IDENTIFIED BY 'golangpassword';

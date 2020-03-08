@@ -32,6 +32,7 @@ func server_cmd_tests() {
 	fmt.Println(insertNewToken())
 
 	if checkTokenExists("1234567") {
+		//It should hit here
 		fmt.Println("count: ", checkPathCount("abc"))
 	} else {
 		fmt.Println("Unathorized")
@@ -40,10 +41,12 @@ func server_cmd_tests() {
 	if checkTokenExists("1") {
 		fmt.Println("count: ", checkPathCount("abc"))
 	} else {
+		//It should hit here
 		fmt.Println("Unathorized")
 	}
 
 	if checkTokenExists("1234567") {
+		//It should hit here
 		fmt.Println("count: ", checkPathCount("abcd"))
 	} else {
 		fmt.Println("Unathorized")
@@ -61,9 +64,7 @@ func (s *server) Auth(ctx context.Context, in *proto.TokenRequest) (*proto.Token
 func (s *server) CheckPath(ctx context.Context, in *proto.RequestPath) (*proto.CountReply, error) {
 	if checkTokenExists(in.Token) {
 		count := checkPathCount(in.Path)
-		fmt.Println("count: ", count)
 		s1 := strconv.FormatInt(int64(count), 10)
-		fmt.Println("count String: ", s1)
 		return &proto.CountReply{Count: s1}, nil
 	} else {
 		fmt.Println("Unathorized")
@@ -72,12 +73,11 @@ func (s *server) CheckPath(ctx context.Context, in *proto.RequestPath) (*proto.C
 }
 
 func main() {
-	fmt.Println("starting server")
+	fmt.Println("starting gRPC server")
 	listeningServer, error := net.Listen("tcp", port)
 	if error != nil {
 		log.Fatalf("failed to listen: %v", error)
 	}
-	fmt.Println("starting Auth Server")
 	authServer := grpc.NewServer()
 	proto.RegisterTokenServiceServer(authServer, &server{})
 	if error := authServer.Serve(listeningServer); error != nil {
