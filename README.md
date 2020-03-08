@@ -1,10 +1,10 @@
-Token Sample Service in Golang
+Token Sample Services in Go
 
 Setup:
 1) create a mysqlDB on your local system
 2) Run sql/1.sql 
     1) It will create all DB tables
-    2) 1 sample date row
+    2) 1 sample data row
     3) create user/grant permissions 
 3) Make sure Golang is setup on your PATH, including the following libraries
     1) go get -u github.com/go-sql-driver/mysql
@@ -28,6 +28,5 @@ Setup:
             1) it will return you a token
         2) GET localhost:8080/{path_to_test}
             1) you will need to set the Header parameter of Authorization: {token from step 1}
-            2) it will return you a count for how many times that path was used
-                
+           
 
