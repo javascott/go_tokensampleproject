@@ -25,8 +25,10 @@ func checkPath(w http.ResponseWriter, r *http.Request) {
 		path := strings.Replace(r.URL.String(), "/", "", -1)
 		returnCount := ReturnCount{checkPathCount(path)}
 		//converting this to look like a JSON object
-		returnJSON := "{count: " + strconv.FormatInt(int64(returnCount.count), 10) + "}"
+		returnJSON := "{\"count\": \"" + strconv.FormatInt(int64(returnCount.count), 10) + "\"}"
+		w.Header().Add("Content-Type", "application/json")
 		fmt.Fprintf(w, returnJSON)
+
 	} else {
 		w.WriteHeader(401)
 		fmt.Fprintf(w, "Unauthorized")
@@ -40,7 +42,8 @@ type ReturnToken struct {
 func insertNewToken(w http.ResponseWriter, r *http.Request) {
 	returnToken := ReturnToken{TokenDaos.CreateToken()}
 	//converting this to look like a JSON object
-	returnJSON := "{token: " + returnToken.token + "}"
+	returnJSON := "{\"token\": \"" + returnToken.token + "\"}"
+	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(201)
 	fmt.Fprintf(w, returnJSON)
 }
